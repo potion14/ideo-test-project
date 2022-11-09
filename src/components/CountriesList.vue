@@ -1,9 +1,9 @@
 <template>
     <div>
         <h1>Countries List</h1>
-        <div v-for="country in sortedArray" :key="country.id">
-            <p>{{country.TotalConfirmed}}</p>
-        </div>
+        <ul v-for="country in sortedArray.slice(0, 20)" :key="country.id">
+            <li>{{country.TotalConfirmed}}</li>
+        </ul>
     </div>
 </template>
 <script>
@@ -33,8 +33,6 @@ export default {
         axios.get('https://api.covid19api.com/summary')
         .then((response) => {
             this.content = response.data.Countries
-            console.log(this.content.Countries[1].Country)
-            this.content.order
         })
     },
 }
