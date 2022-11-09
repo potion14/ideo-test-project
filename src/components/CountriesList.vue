@@ -1,9 +1,9 @@
 <template>
     <div>
         <h1>Countries List</h1>
-        <ul v-for="country in sortedArray.slice(0, 20)" :key="country.id">
-            <li>{{country.TotalConfirmed}}</li>
-        </ul>
+        <div v-for="country in sortedArray.slice(0, 20)" :key="country.id">
+            <p>{{country.Country}}</p>
+        </div>
     </div>
 </template>
 <script>
