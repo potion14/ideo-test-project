@@ -1,5 +1,12 @@
 <template>
-  <CountriesList/>
+  <Suspense>
+    <template #default>
+      <CountriesList/>
+    </template>
+    <template #fallback>
+      <h2>Loading data...</h2>
+    </template>
+  </Suspense>
 </template>
 
 <script>
