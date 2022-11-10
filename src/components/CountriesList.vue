@@ -2,7 +2,7 @@
     <div class="container">
         <h1 class="header">Top 20 countries ordered descending by Cov-19 confirmed cases</h1>
         <ul class="list-group" v-for="country in content.loadedData.data.Countries.slice(0, 20)" :key="country.id">
-            <li>{{country.TotalConfirmed}}</li>
+            <li>{{country.Country}}</li>
             <hr/>
         </ul>
     </div>
