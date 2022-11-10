@@ -4,7 +4,7 @@
       <CountriesList/>
     </template>
     <template #fallback>
-      <h2>Loading data...</h2>
+      <h2>Loading data... (it can time a couple of minutes)</h2>
     </template>
   </Suspense>
 </template>
